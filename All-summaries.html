@@ -1115,5 +1115,31 @@ footer {
       });
     });
   </script>
+   <script>
+    // Disable right-click context menu
+    document.addEventListener('contextmenu', function (e) {
+      e.preventDefault(); // Prevent the default context menu from appearing
+      alert('Right-click is disabled on this page.'); // Optional: Show an alert message
+    });
+  
+    // Optional: Disable keyboard shortcuts like Ctrl+C, Ctrl+U, etc.
+    document.addEventListener('keydown', function (e) {
+      // Disable Ctrl+C (Copy)
+      if (e.ctrlKey && e.key === 'c') {
+        e.preventDefault();
+        alert('Copying is disabled on this page.');
+      }
+      // Disable Ctrl+U (View Page Source)
+      if (e.ctrlKey && e.key === 'u') {
+        e.preventDefault();
+        alert('Viewing page source is disabled on this page.');
+      }
+      // Disable Ctrl+Shift+I (Developer Tools)
+      if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+        e.preventDefault();
+        alert('Developer tools are disabled on this page.');
+      }
+    });
+  </script>
 </body>
 </html>
