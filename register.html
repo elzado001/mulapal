@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join Mulapal Agencies - Step-by-step guide to register and start earning money online">
+  <meta name="keywords" content="Mulapal registration, sign up, create account, join Mulapal, earn money online">
+  
+  <title>Register | Mulapal Agencies - Start Earning Today</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Base Styles */
+    :root {
+      --primary-color: #4a6bff;
+      --secondary-color: #ff6b6b;
+      --text-color: #333;
+      --bg-color: #f9f9f9;
+      --card-bg: #ffffff;
+      --header-bg: #ffffff;
+      --footer-bg: #2c3e50;
+      --border-color: #e1e1e1;
+      --transition: all 0.3s ease;
+      --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .dark-mode {
+      --primary-color: #5d7dff;
+      --secondary-color: #ff7b7b;
+      --text-color: #f0f0f0;
+      --bg-color: #121212;
+      --card-bg: #1e1e1e;
+      --header-bg: #1a1a1a;
+      --footer-bg: #1a1a1a;
+      --border-color: #333;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      transition: var(--transition);
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      background-color: var(--bg-color);
+      padding-top: 70px; /* Space for fixed header */
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--primary-color);
+    }
+
+    /* Header & Navigation */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: var(--header-bg);
+      box-shadow: var(--shadow);
+      z-index: 1000;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+
+    /* Desktop Navigation */
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+    }
+
+    .desktop-nav .nav-list {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .desktop-nav .nav-list li {
+      margin-left: 2rem;
+    }
+
+    .desktop-nav .nav-link {
+      color: var(--text-color);
+      font-weight: 500;
+      position: relative;
+    }
+
+    .desktop-nav .nav-link:hover {
+      color: var(--primary-color);
+    }
+
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-color);
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -280px;
+      width: 280px;
+      height: 100vh;
+      background: var(--header-bg);
+      box-shadow: var(--shadow-lg);
+      z-index: 1000;
+      padding: 5rem 2rem 2rem;
+      transition: right 0.3s ease;
+      overflow-y: auto;
+    }
+
+    .mobile-menu.active {
+      right: 0;
+    }
+
+    .close-menu {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      font-size: 1.5rem;
+      color: var(--primary-color);
+      cursor: pointer;
+      z-index: 1001;
+      background: rgba(255,255,255,0.2);
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+    }
+
+    .close-menu:hover {
+      color: var(--secondary-color);
+      background: rgba(255,255,255,0.3);
+    }
+
+    .mobile-nav .nav-list {
+      list-style: none;
+    }
+
+    .mobile-nav .nav-list li {
+      margin-bottom: 1.5rem;
+    }
+
+    .mobile-nav .nav-link {
+      color: var(--text-color);
+      font-size: 1.1rem;
+      font-weight: 500;
+      display: block;
+      padding: 0.5rem 0;
+    }
+
+    .mobile-nav .nav-link:hover {
+      color: var(--primary-color);
+    }
+
+    /* Theme Switch */
+    /* Theme Switch */
+    .theme-switch-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .theme-switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .theme-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: var(--primary-color);
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+    /* Registration Hero Section */
+    .register-hero {
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8rem 2rem 4rem;
+      background: linear-gradient(135deg, rgba(74, 107, 255, 0.1) 0%, rgba(255, 107, 107, 0.1) 100%);
+    }
+
+    .register-hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+
+    .register-hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+
+    /* Registration Steps */
+    .registration-steps {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .step {
+      display: flex;
+      margin-bottom: 3rem;
+      background-color: var(--card-bg);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border-color);
+    }
+
+    .step-number {
+      background-color: var(--primary-color);
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 80px;
+    }
+
+    .step-content {
+      padding: 2rem;
+      flex: 1;
+    }
+
+    .step-content h3 {
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+
+    .requirements {
+      margin-top: 2rem;
+    }
+
+    .requirements h3 {
+      color: var(--secondary-color);
+      margin-bottom: 1rem;
+    }
+
+    .requirements ul {
+      list-style-position: inside;
+      margin-bottom: 1.5rem;
+    }
+
+    .requirements li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Registration Form */
+    .registration-form {
+      max-width: 600px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background-color: var(--card-bg);
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border-color);
+    }
+
+    .registration-form h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--primary-color);
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid var(--border-color);
+      border-radius: 5px;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 0.8rem 1.8rem;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .btn:hover {
+      background-color: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* After Registration Section */
+    .after-registration {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background-color: var(--card-bg);
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border-color);
+    }
+
+    .after-registration h2 {
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--footer-bg);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      text-align: left;
+    }
+
+    .footer-section {
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-section h3 {
+      color: white;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .footer-section ul {
+      list-style: none;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-section ul li a {
+      color: #ddd;
+      transition: color 0.3s;
+    }
+
+    .footer-section ul li a:hover {
+      color: var(--secondary-color);
+    }
+
+    .social-icons a {
+      color: white;
+      margin-right: 1rem;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: var(--secondary-color);
+    }
+
+    .footer-bottom {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Floating WhatsApp Button */
+    .floating-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    .whatsapp-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+      transform: translateY(-3px);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      
+      .desktop-nav {
+        display: none;
+      }
+      
+      .register-hero {
+        padding: 6rem 1rem 3rem;
+      }
+      
+      .register-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .step {
+        flex-direction: column;
+      }
+      
+      .step-number {
+        width: 100%;
+        padding: 1rem;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .mobile-menu {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <!-- Header -->
+  <header>
+    <a href="index.html" class="logo">Mulapal Agencies</a>
+    
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="register.html" class="nav-link">Create Account</a></li>
+        <li><a href="index.html#faqs" class="nav-link">FAQs</a></li>
+        <li><a href="legitimacy.html" class="nav-link">Legitimacy</a></li>
+        <li><a href="index.html#how-it-works" class="nav-link">How It Works</a></li>
+        <li>
+          <div class="theme-switch-container">
+            <span>Dark Mode</span>
+            <label class="theme-switch">
+              <input type="checkbox" id="desktop-theme-toggle">
+              <div class="slider round"></div>
+            </label>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    
+    <!-- Mobile Menu Toggle -->
+    <button class="menu-toggle" id="mobile-menu-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="close-menu" id="close-menu">
+      <i class="fas fa-times"></i>
+    </button>
+    
+    <nav class="mobile-nav">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="https://mulapal.com/register.php?ref=EIzado" class="nav-link">Create Account</a></li>
+        <li><a href="index.html#faqs" class="nav-link">FAQs</a></li>
+        <li><a href="legitimacy.html" class="nav-link">Legitimacy</a></li>
+        <li><a href="All-summaries.html" class="nav-link">How It Works</a></li>
+        <li><a href="register.html">How To Register</a></li>
+      </ul>
+      <!-- Theme Switch in Mobile Menu -->
+      <div class="theme-switch-container">
+        <span>Dark Mode</span>
+        <label class="theme-switch">
+          <input type="checkbox" id="mobile-theme-toggle">
+          <div class="slider round"></div>
+        </label>
+      </div>
+    </nav>
+  </div>
+  <!-- Registration Hero Section -->
+  <section class="register-hero">
+    <div>
+      <h1>Join Mulapal Agencies Today</h1>
+      <p>Start your journey to financial freedom by completing simple online tasks. Our registration process is quick, easy, and completely free.</p>
+    </div>
+  </section>
+
+  <!-- Registration Steps Section -->
+  <section class="registration-steps">
+    <div class="step">
+      <div class="step-number">1</div>
+      <div class="step-content">
+        <h3>Check Your Eligibility</h3>
+        <p>Before registering, ensure you meet our basic requirements. Mulapal 
+            Agencies is open to individuals worldwide.
+             You'll need a stable internet connection and a device
+              (computer, smartphone, or tablet) to complete tasks.</p>
+        
+        <div class="requirements">
+          <h3>What You'll Need:</h3>
+          <ul>
+            <li>Valid email address</li>
+            <li>Activation fee (KES 500 for Kenyans)</li>
+            <li>Payment method details (PayPal, bank account, etc.)</li>
+            <li>At least 1-2 hours daily to complete tasks</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">2</div>
+      <div class="step-content">
+        <h3>Complete the Registration Form</h3>
+        <p>Fill out our simple registration form with your personal details. This information helps us create your account and ensure you receive payments correctly. All information is kept secure and confidential.</p>
+        <p>Be prepared to provide:</p>
+        <ul>
+          <li>Full legal name (as it appears on your ID)</li>
+          <li>Country of residence</li>
+          <li>Contact information</li>
+          <li>Preferred payment method details</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">3</div>
+      <div class="step-content">
+        <h3>Activate  Your Account</h3>
+        <p>After submitting your registration details, login to your account and pay
+             registration fee using any of the methods provided. Click the link in the email to activate your account. For security purposes, we may require additional identity verification.</p>
+        <p>Once your payment is confirmed:</p>
+        <ul>
+          <li>You'll recieve a confirmation email with further details</li>
+          <li>Login  to your account</li>
+          <li>Perform Tasks and start earning</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+ 
+  <!-- After Registration Section -->
+  <section class="after-registration">
+    <h2>What Happens After Registration?</h2>
+    <p>Once your account is verified, you'll gain immediate access to our member dashboard where you can:</p>
+    <ul>
+      <li>Browse available tasks and their payout amounts</li>
+      <li>Track your earnings in real-time</li>
+      <li>Access training materials and tutorials</li>
+      <li>Connect with our support team</li>
+      <li>Set up your payment preferences</li>
+    </ul>
+    <p>We recommend new members start with our "Beginner Tasks" to familiarize themselves with our platform. These simpler tasks help you build confidence and understand our system before moving on to higher-paying opportunities.</p>
+    <p>Within 24 hours of registration, you'll receive a welcome email with tips for maximizing your earnings and important resources to help you succeed.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section about">
+        <div class="logo">Mulapal Agencies</div>
+        <p>Your trusted platform for earning money online by completing simple tasks from anywhere in the world.</p>
+      </div>
+      
+      <div class="footer-section links">
+        <h3>Quick Links</h3>
+         <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="https://mulapal.com/register.php?ref=EIzado">Create Account</a></li>
+          <li><a href="index.html#faqs">FAQs</a></li>
+          <li><a href="legitimacy.html">Legitimacy</a></li>
+          <li><a href="All-summaries.html">How It Works</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section contact">
+        <h3>Contact Us</h3>
+        <p><i class="fas fa-envelope"></i> support@mulapal.com</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Mulapal Agencies. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <div class="floating-buttons">
+    <a href="https://wa.me/254742381320?text=Hi.%20I%20need%20help%20with%20Mulapal%20Agencies%20registration." class="whatsapp-btn">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const closeMenuBtn = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav .nav-link');
+
+    // Toggle mobile menu
+    function toggleMobileMenu() {
+      mobileMenu.classList.toggle('active');
+      document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    }
+
+    // Event listeners
+    mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+    closeMenuBtn.addEventListener('click', toggleMobileMenu);
+
+    // Close when clicking a link
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', toggleMobileMenu);
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!mobileMenu.contains(e.target) && 
+          e.target !== mobileMenuToggle && 
+          !mobileMenuToggle.contains(e.target)) {
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Theme Switch Functionality
+    const desktopThemeToggle = document.getElementById('desktop-theme-toggle');
+    const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+    const currentTheme = localStorage.getItem('theme');
+
+    function setTheme(isDark) {
+      if (isDark) {
+        document.documentElement.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.documentElement.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    // Initialize theme
+    if (currentTheme === 'dark') {
+      document.documentElement.classList.add('dark-mode');
+      if (desktopThemeToggle) desktopThemeToggle.checked = true;
+      if (mobileThemeToggle) mobileThemeToggle.checked = true;
+    }
+
+    // Desktop theme toggle
+    if (desktopThemeToggle) {
+      desktopThemeToggle.addEventListener('change', (e) => {
+        setTheme(e.target.checked);
+        if (mobileThemeToggle) mobileThemeToggle.checked = e.target.checked;
+      });
+    }
+
+    // Mobile theme toggle
+    if (mobileThemeToggle) {
+      mobileThemeToggle.addEventListener('change', (e) => {
+        setTheme(e.target.checked);
+        if (desktopThemeToggle) desktopThemeToggle.checked = e.target.checked;
+      });
+    }
+
+    // Form submission handling
+    document.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Here you would normally send the form data to your server
+      alert('Thank you for registering! We will contact you shortly with further instructions.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>

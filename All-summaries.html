@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mulapal - Earn money online by performing simple tasks. Join our community today!">
+  <meta name="keywords" content="Mulapal, earn money online, online tasks, make money">
+  <title>Mulapal - How It Works in Different Countries</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* all-summaries99.css */
+
+/* Base Styles */
+:root {
+  --primary-color: #4a6bff;
+  --secondary-color: #ff6b6b;
+  --text-color: #333;
+  --bg-color: #f9f9f9;
+  --card-bg: #ffffff;
+  --header-bg: #ffffff;
+  --footer-bg: #2c3e50;
+  --border-color: #e1e1e1;
+  --transition: all 0.3s ease;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode {
+  --primary-color: #5d7dff;
+  --secondary-color: #ff7b7b;
+  --text-color: #f0f0f0;
+  --bg-color: #121212;
+  --card-bg: #1e1e1e;
+  --header-bg: #1a1a1a;
+  --footer-bg: #1a1a1a;
+  --border-color: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: var(--transition);
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  padding-top: 70px; /* Space for fixed header */
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+/* Header & Navigation */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: var(--header-bg);
+      box-shadow: var(--shadow);
+      z-index: 1000;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+
+    /* Desktop Navigation */
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+    }
+
+    .desktop-nav .nav-list {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .desktop-nav .nav-list li {
+      margin-left: 2rem;
+    }
+
+    .desktop-nav .nav-link {
+      color: var(--text-color);
+      font-weight: 500;
+      position: relative;
+    }
+
+    .desktop-nav .nav-link:hover {
+      color: var(--primary-color);
+    }
+
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-color);
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -280px;
+      width: 280px;
+      height: 100vh;
+      background: var(--header-bg);
+      box-shadow: var(--shadow-lg);
+      z-index: 1000;
+      padding: 5rem 2rem 2rem;
+      transition: right 0.3s ease;
+      overflow-y: auto;
+    }
+
+    .mobile-menu.active {
+      right: 0;
+    }
+
+    .close-menu {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      font-size: 1.5rem;
+      color: var(--primary-color);
+      cursor: pointer;
+      z-index: 1001;
+      background: rgba(255,255,255,0.2);
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+    }
+
+    .close-menu:hover {
+      color: var(--secondary-color);
+      background: rgba(255,255,255,0.3);
+    }
+
+    .mobile-nav .nav-list {
+      list-style: none;
+    }
+
+    .mobile-nav .nav-list li {
+      margin-bottom: 1.5rem;
+    }
+
+    .mobile-nav .nav-link {
+      color: var(--text-color);
+      font-size: 1.1rem;
+      font-weight: 500;
+      display: block;
+      padding: 0.5rem 0;
+    }
+
+    .mobile-nav .nav-link:hover {
+      color: var(--primary-color);
+    }
+/* Theme Switch */
+    .theme-switch-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .theme-switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .theme-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: var(--primary-color);
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+
+.register-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.register-btn:hover {
+  background-color: var(--secondary-color);
+}
+
+.register-btn a {
+  color: white;
+}
+
+/* Blog Container */
+.blog-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+@media (min-width: 992px) {
+  .blog-container {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+/* All Summaries Section */
+.all-summaries {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+}
+
+.all-summaries h2 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.scrollable-content {
+  max-height: 80vh;
+  overflow-y: auto;
+  padding-right: 1rem;
+}
+
+/* Summary Cards */
+.summary {
+  background-color: var(--bg-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+}
+
+.summary h3 {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.summary img {
+  width: 100%;
+  border-radius: 8px;
+  margin: 1rem 0;
+  border: 1px solid var(--border-color);
+}
+
+.summary p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Popular Posts */
+.popular-posts {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+}
+
+.popular-posts h3 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.popular-post {
+  display: flex;
+  margin-bottom: 1.5rem;
+  background-color: var(--bg-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+}
+
+.popular-post img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.popular-content {
+  padding: 1rem;
+  flex: 1;
+}
+
+.popular-content a {
+  font-weight: 500;
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+.popular-content a:hover {
+  color: var(--primary-color);
+}
+
+.meta {
+  color: #777;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.dark-mode .meta {
+  color: #aaa;
+}
+
+/* Contact Section */
+.contact {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+}
+
+.contact h2 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.contact form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.contact textarea {
+  min-height: 150px;
+}
+
+.contact button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.8rem 1.8rem;
+  border-radius: 30px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 100%;
+}
+
+.contact button:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+/* Footer */
+footer {
+  background-color: var(--footer-bg);
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  text-align: left;
+}
+
+.footer-section {
+  margin-bottom: 1.5rem;
+}
+
+.footer-section h3 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+  color: #ddd;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: var(--secondary-color);
+}
+
+.subscription-form {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.subscription-form input {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.subscription-form button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0 1rem;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.subscription-form button:hover {
+  background-color: var(--secondary-color);
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--secondary-color);
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Floating Buttons */
+.floating-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.whatsapp-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  
+  .desktop-nav {
+    display: none;
+  }
+  
+  .blog-container {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+  
+  .all-summaries, .popular-posts, .contact {
+    padding: 1.5rem;
+  }
+  
+  .popular-post {
+    flex-direction: column;
+  }
+  
+  .popular-post img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+  <!-- Floating WhatsApp Button -->
+  <div class="floating-buttons">
+    <a href="https://wa.me/254742381320?text=Hi.%20I%20would%20like%20to%20join%20Mulapal%20Agencies.%20Please%20guide%20me." class="whatsapp-btn">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+ <!-- Header -->
+  <header>
+    <a href="index.html" class="logo">Mulapal Agencies</a>
+    
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="https://mulapal.com/ref?=EIzado" class="nav-link">Create Account</a></li>
+        <li><a href="index.html#faqs" class="nav-link">FAQs</a></li>
+        <li><a href="legitimacy.html" class="nav-link">Legitimacy</a></li>
+        <li><a href="All-summaries.html" class="nav-link">How It Works</a></li>
+        <li><a href="register.html">How To Register</a></li>
+        <li>
+          <div class="theme-switch-container">
+            <span>Dark Mode</span>
+            <label class="theme-switch">
+              <input type="checkbox" id="desktop-theme-toggle">
+              <div class="slider round"></div>
+            </label>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    
+    <!-- Mobile Menu Toggle -->
+    <button class="menu-toggle" id="mobile-menu-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="close-menu" id="close-menu">
+      <i class="fas fa-times"></i>
+    </button>
+    
+    <nav class="mobile-nav">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="https://mulapal.com/ref?=EIzado" class="nav-link">Create Account</a></li>
+        <li><a href="index.html#faqs" class="nav-link">FAQs</a></li>
+        <li><a href="legitimacy.html" class="nav-link">Legitimacy</a></li>
+        <li><a href="All-summaries.html" class="nav-link">How It Works</a></li>
+        <li><a href="register.html">How To Register</a></li>
+      </ul>
+      
+      <!-- Theme Switch in Mobile Menu -->
+      <div class="theme-switch-container">
+        <span>Dark Mode</span>
+        <label class="theme-switch">
+          <input type="checkbox" id="mobile-theme-toggle">
+          <div class="slider round"></div>
+        </label>
+      </div>
+    </nav>
+  </div>
+  <!-- All Summaries and Popular Posts Section -->
+<section class="blog-container">
+    <!-- All Summaries (70%) with Scrollable Frame -->
+    <section class="all-summaries">
+        <h2>How Mulapal Works in Different Countries</h2>
+        <div class="scrollable-content">
+          <!-- Kenya Summary -->
+          <div class="summary">
+            <h3>How Mulapal Works in Kenya</h3>
+            <img src="images/1.png" alt="Mulapal in Kenya">
+            <p> <a href="https://mulapal.com/register.php?ref=Elzado" style="color: red; text-decoration: underline; font-size: 20px;">Tap
+                here to create your account and start earning in Kenya!</a></p>
+           <p>
+            MULAPAL AGENCIES KENYA🇰🇪🇰🇪</p>
+
+            <p>Welcome to MULAPAL ,  the  gateway to multitude of ways to earn money online while enjoying the convenience and flexibility of working from home or anywhere you choose.
+            </p>
+            <p>📌 With an active account you will be able to make upto 5,000*Ksh daily through the following ways of earning:
+            </p>
+            <p>
+            🔖WELCOME BONUS - receive 300 Ksh  welcome bonus upon joining us.<br>
+            🔖Watching YouTube videos.<br>
+            🔖Watching tiktok videos.<br>
+            🔖Playing games (Chess&draughts)<br>
+            🔖Clicking ads<br>
+            🔖Facebook and Instagram reels<br>
+            🔖Answering simple trivia questions<br>
+            🔖Spinning <br>
+            🔖AFFILIATE PROGRAM ➡ EARN commissions by sharing your link.<br>
+                    Level 1 -300 Ksh<br>
+                    Level 2 -100 Ksh<br>
+                    Level 3 -50 Ksh <br>
+            </p>
+             <p>Added advantages in MULAPAL : <br>
+            ♦Weekly agent bonus.<br>
+            ♦Automatic activations.<br>
+            ♦Instant withdrawals.<br>
+            ♦Free forex classes <br>
+            ♦24/7 customer service<br>
+            ACTIVATION FEE Ksh 500<br>
+           </p>
+           <p>
+              Payments are made via <strong>M-Pesa</strong>, Kenya's leading mobile money service, ensuring fast and secure transactions. With a user-friendly interface and a supportive community, Mulapal has become a trusted platform for Kenyans looking to supplement their income.
+            </p>
+          </div>
+      
+          <!-- Tanzania Summary -->
+          <div class="summary">
+            <h3>How Mulapal Works in Tanzania</h3>
+            <img src="images/tz1.jpeg" alt="Mulapal in Tanzania">
+            <p> <a href="https://mulapal.com/register.php?ref=Elzado" style="color: red; text-decoration: underline; font-size: 20px;">Tap
+                 here to create your account and start earning in Tanzania!</a></p>
+            <p>
+                HOW TO EARN WITH MULAPAL AGENCIES IN TANZANIA 🇹🇿 🇹🇿</p>
+
+                <p>Welcome to Mulapal, the  gateway to multitude of ways to earn money online while enjoying the convenience and flexibility of working from home or anywhere you choose.
+                    <br>
+                📌 With an active account you will be able to make upto TZS 50,000 daily through the following ways of earning:</p>
+                <p>
+                🔖WELCOME BONUS - receive TZS 6000 welcome bonus upon joining us.<br>
+                🔖Watching YouTube videos.<br>
+                🔖Watching tiktok videos.<br>
+                🔖Playing games (Chess&draughts)<br>
+                🔖Clicking ads<br>
+                🔖Answering simple trivia questions<br>
+                🔖Spinning <br>
+                🔖AFFILIATE PROGRAM ➡ EARN commissions by sharing your link.<br>
+                        Level 1 -TZS 5300<br>
+                        Level 2 -TZS 3000<br>
+                        Level 3 -TZS 2000 <br>
+                </p>
+                <p>
+                 Added advantages in Mulapal: 
+                ✅Weekly agent bonus.<br>
+                ✅Automatic activations.<br>
+                ✅Instant withdrawals.<br>
+                ✅Free forex classes <br>
+                ✅24/7 customer service<br>
+                ACTIVATION FEE TZS 12000</p>
+            <p>
+              Payments are processed through <strong>Tigo Pesa</strong> and <strong>M-Pesa</strong>, making it easy for users to receive their earnings. Mulapal's transparent payment system and straightforward registration process have made it a favorite among Tanzanians seeking flexible earning opportunities.
+            </p>
+          </div>
+
+           <!-- uganda Summary -->
+           <div class="summary">
+            <h3>How Mulapal Works in Uganda</h3>
+            <img src="images/ug.jpeg" alt="Mulapal in Uganda">
+            <p> <a href="https://mulapal.com/register.php?ref=Elzado" style="color: red; text-decoration: underline; font-size: 20px;">Tap
+                here to create your account and start earning in Uganda!</a></p>
+           <p>
+            MULAPAL AGENCIES UGANDA 🇺🇬🇺🇬</p>
+
+            <p>Welcome to MULAPAL ,  the  gateway to multitude of ways to earn money online while enjoying the convenience and flexibility of working from home or anywhere you choose.
+                <br>
+            📌 With an active account you will be able to make upto 50, 000 UGX daily through the following ways of earning:</p>
+            <p>
+            🔖WELCOME BONUS - receive 8500 UGX  welcome bonus upon joining us.<br>
+            🔖Watching YouTube videos.<br>
+            🔖Watching tiktok videos.<br>
+            🔖Playing games (Chess&draughts)<br>
+            🔖Clicking ads<br>
+            🔖Facebook and Instagram reels<br>
+            🔖Answering simple trivia questions<br>
+            🔖Spinning <br>
+            🔖AFFILIATE PROGRAM ➡ EARN commissions by sharing your link.<br>
+                    Level 1 -9,000 UGX<br>
+                    Level 2 -5000 UGX<br>
+                    Level 3 -2000 UGX <br>
+            </p>
+             <p>
+             Added advantages in MULAPAL : 
+            ♦Weekly agent bonus.<br>
+            ♦Automatic activations.<br>
+            ♦Instant withdrawals.<br>
+            ♦Free forex classes <br>
+            ♦24/7 customer service<br>
+            ACTIVATION FEE UGX 18,000  </p>
+          </div>
+      
+          <!-- Ghana Summary -->
+          <div class="summary">
+            <h3>How Mulapal Works in Ghana</h3>
+            <img src="images/gh.jpeg" alt="Mulapal in Ghana">
+            <p> <a href="https://mulapal.com/register.php?ref=Elzado" style="color: red; text-decoration: underline; font-size: 20px;">Tap
+                 here to create your account and start earning in Ghana!</a></p>
+            <p>
+                MULAPAL AGENCIES GHANA🇬🇭🇬🇭</p>
+
+                <p>Welcome to MULAPAL ,  the  gateway to multitude of ways to earn money online while enjoying the convenience and flexibility of working from home or anywhere you choose.
+                    <br>
+                📌 With an active account you will be able to make upto 200 GHC daily through the following ways of earning:</p>
+                <p>
+                🔖WELCOME BONUS - receive 30 GHC  welcome bonus upon joining us.<br>
+                🔖Watching YouTube videos.<br>
+                🔖Watching tiktok videos.<br>
+                🔖Playing games (Chess&draughts)<br>
+                🔖Clicking ads<br>
+                🔖Facebook and Instagram reels<br>
+                🔖Answering simple trivia questions<br>
+                🔖Spinning <br>
+                🔖AFFILIATE PROGRAM ➡ EARN commissions by promoting our services.<br>
+                        Level 1 -35 GHC<br>
+                        Level 2 -20 GHC<br>
+                        Level 3 -10 GHC <br>
+                </p>
+                <p>
+                 Added advantages in MULAPAL : 
+                ♦Weekly agent bonus.<br>
+                ♦Automatic activations.<br>
+                ♦Instant withdrawals.<br>
+                ♦Free forex classes <br>
+                ♦24/7 customer service<br>
+                ACTIVATION FEE GHC 80 </p>
+          </div>
+
+         <!-- Malawi Summary -->
+         <div class="summary">
+            <h3>How Mulapal Works in Malawi</h3>
+            <img src="images/mw.jpeg" alt="Mulapal in Malawi">
+            <p> <a href="https://mulapal.com/register.php?ref=Elzado" style="color: red; text-decoration: underline; font-size: 20px;">Tap
+                here to create your account and start earning in Malawi!</a></p>
+           <p>
+            HOW TO EARN IN MULAPAL AGENCIES  MALAWI🇲🇼🇲🇼</p>
+            <p>
+            Welcome to Mulapal, the  gateway to multitude of ways to earn money online while enjoying the convenience and flexibility of working from home or anywhere you choose.
+            <br>
+            📌 With an active account you will be able to make upto MK 20K daily through the following ways of earning:</p>
+            <p>
+            🔖WELCOME BONUS - receive MK 3000 welcome bonus upon joining us.<br>
+            🔖Watching YouTube videos.<br>
+            🔖Watching tiktok videos.<br>
+            🔖Playing games (Chess&draughts)<br>
+            🔖Clicking ads<br>
+            🔖Answering simple trivia questions<br>
+            🔖Spinning <br>
+            🔖AFFILIATE PROGRAM ➡ EARN commissions by sharing your link.<br>
+                    Level 1 -MK 2100<br>
+                    Level 2 -MK 1500<br>
+                    Level 3 -MK 500 <br>
+            </p>
+                <p>
+             Added advantages in Mulapal: 
+            ✅Weekly agent bonus.<br>
+            ✅Automatic activations.<br>
+            ✅Instant withdrawals.<br>
+            ✅Free forex classes <br>
+            ✅24/7 customer service<br>
+            ACTIVATION FEE MK 9000</p>
+          </div>
+      
+          <!-- Zibambwe Summary -->
+          <div class="summary">
+            <h3>How Mulapal Works in Zibambwe</h3>
+            <img src="images/zbw.jpeg" alt="Mulapal in Zibambwe">
+            <p> <a href="https://mulapal.com/register.php?ref=Elzado" style="color: red; text-decoration: underline; font-size: 20px;">Tap
+                 here to create your account and start earning in Zibambwe!</a></p>
+            <p>
+                🌹⭐MULAPAL AGENCIES ZIMBABWE 🇿🇼<br>
+                Let's make every click count towards a brighter future.🔥<br>
+                ✳Welcom to Mulapal where we offer diverse opportunities to thrive financially , register for FREE then unlock the below earning methods with  activation fees [ZWD 2500]
+                <br>
+                ⛑AFFILIATE  MARKETING⛑<br>
+                This program enables participants to earn commissions  by promoting products or services offered on the platform. The partner is rewarded a payout in 3 levels  as  follows ;-
+                <br> 💰 Level 1 -ZWD 750🎯<br>
+                                 💰Level 2 -ZWD  300🎯🎯<br>
+                                 💰Level 3 -ZWD 160🎯🎯🎯<br>
+                ✅Bigger network results to bigger earnings and so  we  reward TOP  AGENTS with Weekly  Bonuses <br>
+                
+                🎱SPIN AND WIN CASINO🎱<br>
+                ⚽Join us today and experience the thrill of playing casino games while earning money at the same time.<br>
+                🪀Welcome Spin - We offer FREE Spins for all NEW users <br>
+                🪀Casino Spin - You will stake any amount   upto X10 your stake amount depending on your luck💰💰✅<br>
+                💰WELCOME BONUS💰<br>
+                <br>✅Kickstart your earnings with a generous welcome bonus upon joining us receive ZWD 100 welcome bonus , Free Casino Spin And Win and claim FREE INSTAGRAM followers  in your Mulapal Dashboard.
+                🌟TRIVIA QUIZ🌟<br>
+                ✅With our trivia quiz program, you can earn money by answering a wide range of trivia quiz categories. You can answer the questions, and earn Money  for every correct answer.
+                <br>🚨YOUTUBE AND TIKTOK VIDEOS🚨<br>
+                 ✅Participants can earn money simply by watching YouTube and TikTok videos. By engaging with sponsored content and advertisements, individuals have the opportunity to earn passive income while enjoying their favorite videos.
+                 <br>♟GAMES(CHESS AND DRAUGHT)♟<br>
+                ✅In this program, which includes different variants, levels, and competitions. You can challenge other players, test your skills, and WIN CASH prizes.👍
+                <br> 🤖ARTIFICIAL INTELLIGENCE🤖<br>
+                ✅Stay at the forefront of technology and benefit from the growing AI industry.The platform incorporates a chatbot powered by GPT technology. Users can interact with the chatbot for entertainment or to seek information.
+                <br> ⭕ADVERT CLICKS⭕<br>
+                ✅We offer a wide range of ads, including banner ads, pop-up ads, and more. You can click on the ads, view the content, and earn money for every ad you click.   
+                <br>✳FACEBOOK AND INSTAGRAM REELS✳<br>
+                Users the platform can watch curated Facebook and Instagram Reels to earn rewards or income. By engaging with these entertaining and trending videos, they can capitalize on their viewing time, benefiting from ad revenues or loyalty points that can be redeemed for various rewards.
+                
+                <br>🥎BLOGGING/ARTICLE WRITING🥎<br>
+                ✅Articles are typically more formal and informative, aiming to provide detailed analysis, research, or news on a specific topic. They often appear in newspapers, magazines, journals, or academic publications. On the other hand, blog posts are generally more conversational, informal, and personal and you are paid  a maximum of 2$ depending on the quality of your article
+                <br>🌇Digital Art Marketplace 🌇<br>
+                 ✅Users can explore a diverse collection of digital art, including illustrations, digital paintings, and multimedia pieces. This marketplace provides a platform for artists to connect with art enthusiasts and potential buyers. Virtual properties could represent various digital assets, such as websites, domains and digital art.
+                 <br> 🌳FOREX TRADING🌳<br>
+                ✅Our platform offers a wide range of forex trading tools, including charts, indicators, and analysis. You can trade major, minor, and exotic currency pairs, and use leverage to increase your profit potential.
+                We also offer  Forex Binary Bots , Aviator Predictor Software , Bussiness Ebooks/Articles and Sure Fixed Bets Predictions 
+                
+                <br>
+                ✅Our platform is user-friendly and offers a seamless experience, with secure payments {MTN and Airtel Money} and excellent customer support.</p>
+          </div>
+
+         <!-- Nigeria Summary -->
+         <div class="summary">
+            <h3>How Mulapal Works in Nigeria</h3>
+            <img src="images/ng.jpeg" alt="Mulapal in Nigeria">
+            <p> <a href="https://mulapal.com/register.php?ref=Elzado" style="color: red; text-decoration: underline; font-size: 20px;">Tap
+                here to create your account and start earning in Nigeria!</a></p>
+           <p>
+            HOW TO EARN In NIGERIA WITH MULAPAL AGENCIES🇳🇬🇳🇬<br>
+
+            Welcome to MULAPAL ,  the  gateway to multitude of ways to earn money online while enjoying the convenience and flexibility of working from home or anywhere you choose.
+            <br>
+            📌 With an active account you will be able to make upto 15, 000 NGN daily through the following ways of earning:
+            <br>
+            🔖WELCOME BONUS - receive 3000 NGN  welcome bonus upon joining us.<br>
+            🔖Watching YouTube videos.<br>
+            🔖Watching tiktok videos.<br>
+            🔖Playing games (Chess&draughts)<br>
+            🔖Clicking ads<br>
+            🔖Facebook and Instagram reels<br>
+            🔖Answering simple trivia questions<br>
+            🔖Spinning <br>
+            🔖AFFILIATE PROGRAM ➡ EARN commissions by sharing your link.<br>
+                    Level 1 -4,000 NGN<br>
+                    Level 2 -2000 NGN<br>
+                    Level 3 -650 NGN 
+                    <br>
+             Added advantages in MULAPAL : <br>
+            ♦Weekly agent bonus.<br>
+            ♦Automatic activations.<br>
+            ♦Instant withdrawals.<br>
+            ♦Free forex classes <br>
+            ♦24/7 customer service<br>
+            ACTIVATION FEE NGN 8,000 </p>
+          </div>
+      
+          
+        </div>
+      </section>
+    <!-- Popular Posts (30%) -->
+    <div class="popular-posts">
+      <h3>Popular Posts</h3>
+      <div class="popular-post">
+        <img src="images/all-summaries.png" alt="Popular Post 1">
+        <div class="popular-content">
+            <a href="#">Mulapal All Summaries</a>
+          <p class="meta">Posted on 10/03/2025 by Mulapal</p>
+        </div>
+      </div>
+      <div class="popular-post">
+        <img src="images/registration-certificate.jpg" style="border: 2px solid; border-color: darkgray;" alt="Popular Post 2">
+        <div class="popular-content">
+          <a href="legitimacy.html">Is Mulapal Legit?</a>
+          <p class="meta">Posted on 10/03/2025 by Mulapal</p>
+        </div>
+      </div>
+     <div class="popular-post">
+        <img src="images/ways-of-earning.webp" alt="Popular Post 1">
+        <div class="popular-content">
+          <a href="register.html">Ways of Earning with Statehela</a>
+          <p class="meta">Posted on 10/10/2023 by Admin</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section about">
+        <div class="logo">Statehela</div>
+        <p>Earn money online by performing simple tasks. Join our community today!</p>
+      </div>
+      <div class="footer-section links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="https://mulapal.com/register.php?ref=EIzado">Create Account</a></li>
+          <li><a href="#faqs">FAQs</a></li>
+          <li><a href="legitimacy.html">Legitimacy</a></li>
+          <li><a href="All-summaries.html">How It Works</a></li>
+        </ul>
+      </div>
+      <div class="footer-section newsletter">
+        <h3>Subscribe to Our Newsletter</h3>
+        <form class="subscription-form">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+      <div class="footer-section social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Statehela. All rights reserved.</p>
+    </div>
+  </footer>
+
+  
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const closeMenuBtn = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav .nav-link');
+
+    // Toggle mobile menu
+    function toggleMobileMenu() {
+      mobileMenu.classList.toggle('active');
+      document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    }
+
+    // Event listeners
+    mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+    closeMenuBtn.addEventListener('click', toggleMobileMenu);
+
+    // Close when clicking a link
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', toggleMobileMenu);
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!mobileMenu.contains(e.target) && 
+          e.target !== mobileMenuToggle && 
+          !mobileMenuToggle.contains(e.target)) {
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Theme Switch Functionality
+    const desktopThemeToggle = document.getElementById('desktop-theme-toggle');
+    const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+    const currentTheme = localStorage.getItem('theme');
+
+    function setTheme(isDark) {
+      if (isDark) {
+        document.documentElement.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.documentElement.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    // Initialize theme
+    if (currentTheme === 'dark') {
+      document.documentElement.classList.add('dark-mode');
+      if (desktopThemeToggle) desktopThemeToggle.checked = true;
+      if (mobileThemeToggle) mobileThemeToggle.checked = true;
+    }
+
+    // Desktop theme toggle
+    if (desktopThemeToggle) {
+      desktopThemeToggle.addEventListener('change', (e) => {
+        setTheme(e.target.checked);
+        if (mobileThemeToggle) mobileThemeToggle.checked = e.target.checked;
+      });
+    }
+
+    // Mobile theme toggle
+    if (mobileThemeToggle) {
+      mobileThemeToggle.addEventListener('change', (e) => {
+        setTheme(e.target.checked);
+        if (desktopThemeToggle) desktopThemeToggle.checked = e.target.checked;
+      });
+    }
+
+    // Typing Animations
+    document.addEventListener('DOMContentLoaded', function() {
+      // Welcome text
+      new Typed('.typing-welcome', {
+        strings: ['Mulapal Agencies'],
+        typeSpeed: 50,
+        showCursor: false,
+        startDelay: 300
+      });
+
+      // Subtitle
+      new Typed('.typing-subtitle', {
+        strings: ['Your trusted platform for earning money online'],
+        typeSpeed: 30,
+        showCursor: false,
+        startDelay: 1000
+      });
+
+      // Rotating features
+      new Typed('.typing-animation', {
+        strings: ['Global Opportunities', 'Flexible Work', 'Secure Payments', '24/7 Support', 'Easy Withdrawals', 'No Fees'],
+        typeSpeed: 50,
+        backSpeed: 30,
+        loop: true,
+        startDelay: 2000,
+        showCursor: false
+      });
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>

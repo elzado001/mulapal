@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mulapal Agencies - Legitimacy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Base Styles */
+    :root {
+      --primary-color: #4a6bff;
+      --secondary-color: #ff6b6b;
+      --text-color: #333;
+      --bg-color: #f9f9f9;
+      --card-bg: #ffffff;
+      --header-bg: #ffffff;
+      --footer-bg: #2c3e50;
+      --border-color: #e1e1e1;
+      --transition: all 0.3s ease;
+      --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .dark-mode {
+      --primary-color: #5d7dff;
+      --secondary-color: #ff7b7b;
+      --text-color: #f0f0f0;
+      --bg-color: #121212;
+      --card-bg: #1e1e1e;
+      --header-bg: #1a1a1a;
+      --footer-bg: #1a1a1a;
+      --border-color: #333;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      transition: var(--transition);
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      background-color: var(--bg-color);
+      padding-top: 70px; /* Space for fixed header */
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--primary-color);
+    }
+
+    /* Header & Navigation */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: var(--header-bg);
+      box-shadow: var(--shadow);
+      z-index: 1000;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+
+    /* Desktop Navigation */
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+    }
+
+    .desktop-nav .nav-list {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .desktop-nav .nav-list li {
+      margin-left: 2rem;
+    }
+
+    .desktop-nav .nav-link {
+      color: var(--text-color);
+      font-weight: 500;
+      position: relative;
+    }
+
+    .desktop-nav .nav-link:hover {
+      color: var(--primary-color);
+    }
+
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-color);
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+      /* Mobile Menu */
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -280px; 
+      width: 280px;
+      height: 100vh;
+      background: var(--header-bg);
+      box-shadow: var(--shadow-lg);
+      z-index: 1000;
+      padding: 5rem 2rem 2rem;
+      transition: right 0.3s ease;
+      overflow-y: auto;
+    }
+
+    .mobile-menu.active {
+      right: 0;
+    }
+
+    .close-menu {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      font-size: 1.5rem;
+      color: var(--primary-color); /* Changed to primary color for better visibility */
+      cursor: pointer;
+      z-index: 1001;
+      background: rgba(255,255,255,0.2); /* Added background for better visibility */
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+    }
+
+    .close-menu:hover {
+      color: var(--secondary-color);
+      background: rgba(255,255,255,0.3);
+    }
+
+    .mobile-nav .nav-list {
+      list-style: none;
+    }
+
+    .mobile-nav .nav-list li {
+      margin-bottom: 1.5rem;
+    }
+
+    .mobile-nav .nav-link {
+      color: var(--text-color);
+      font-size: 1.1rem;
+      font-weight: 500;
+      display: block;
+      padding: 0.5rem 0;
+    }
+
+    .mobile-nav .nav-link:hover {
+      color: var(--primary-color);
+    }
+
+    /* Theme Switch */
+    .theme-switch-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .theme-switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .theme-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: var(--primary-color);
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    /* Content Sections */
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: 2.2rem;
+      color: var(--primary-color);
+    }
+
+    /* Hero Section */
+    .legitimacy-hero {
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8rem 2rem 4rem;
+      background: linear-gradient(135deg, rgba(74, 107, 255, 0.1) 0%, rgba(255, 107, 107, 0.1) 100%);
+    }
+
+    .legitimacy-hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+
+    .legitimacy-hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+
+    /* Proof Sections */
+    .proof-section {
+      background-color: var(--card-bg);
+      border-radius: 10px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border-color);
+      margin-bottom: 3rem;
+    }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .proof-card {
+      padding: 1.5rem;
+      background-color: var(--bg-color);
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+    }
+
+    .proof-card h3 {
+      color: var(--secondary-color);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .proof-card h3 i {
+      margin-right: 10px;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      margin-top: 3rem;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .testimonial {
+      padding: 1.5rem;
+      background-color: var(--bg-color);
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      position: relative;
+    }
+
+    .testimonial:before {
+      content: '"';
+      font-size: 4rem;
+      color: var(--primary-color);
+      opacity: 0.2;
+      position: absolute;
+      top: 0;
+      left: 10px;
+    }
+
+    .testimonial-content {
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      font-weight: bold;
+      color: var(--primary-color);
+      text-align: right;
+    }
+
+    .testimonial-location {
+      font-size: 0.9rem;
+      color: #777;
+      text-align: right;
+    }
+
+    .dark-mode .testimonial-location {
+      color: #aaa;
+    }
+
+    /* Payment Proof */
+    .payment-proof {
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .payment-images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .payment-images img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      transition: transform 0.3s;
+    }
+
+    .payment-images img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Verification Badges */
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .badge {
+      max-width: 150px;
+      opacity: 0.8;
+      transition: opacity 0.3s;
+    }
+
+    .badge:hover {
+      opacity: 1;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      margin-top: 3rem;
+    }
+
+    .faq-item {
+      margin-bottom: 1rem;
+      background-color: var(--card-bg);
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-color);
+    }
+
+    .faq-question {
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-question:after {
+      content: "+";
+      font-size: 1.5rem;
+    }
+
+    .faq-question.active:after {
+      content: "-";
+    }
+
+    .faq-answer {
+      display: none;
+      padding-top: 0.5rem;
+    }
+
+    .faq-answer.show {
+      display: block;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 0.8rem 1.8rem;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--footer-bg);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      text-align: left;
+    }
+
+    .footer-section {
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-section h3 {
+      color: white;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .footer-section ul {
+      list-style: none;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-section ul li a {
+      color: #ddd;
+      transition: color 0.3s;
+    }
+
+    .footer-section ul li a:hover {
+      color: var(--secondary-color);
+    }
+
+    .social-icons a {
+      color: white;
+      margin-right: 1rem;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: var(--secondary-color);
+    }
+
+    .footer-bottom {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Floating WhatsApp Button */
+    .floating-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    .whatsapp-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+      transform: translateY(-3px);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      
+      .desktop-nav {
+        display: none;
+      }
+      
+      section {
+        padding: 3rem 1rem;
+      }
+      
+      .legitimacy-hero {
+        padding: 6rem 1rem 3rem;
+      }
+      
+      .legitimacy-hero h1 {
+        font-size: 2rem;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .mobile-menu {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <a href="index.html" class="logo">Mulapal Agencies</a>
+    
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="register.html" class="nav-link">Create Account</a></li>
+        <li><a href="index.html#faqs" class="nav-link">FAQs</a></li>
+        <li><a href="legitimacy.html" class="nav-link">Legitimacy</a></li>
+        <li><a href="index.html#how-it-works" class="nav-link">How It Works</a></li>
+        <li>
+          <div class="theme-switch-container">
+            <span>Dark Mode</span>
+            <label class="theme-switch">
+              <input type="checkbox" id="desktop-theme-toggle">
+              <div class="slider round"></div>
+            </label>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    
+    <!-- Mobile Menu Toggle -->
+    <button class="menu-toggle" id="mobile-menu-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="close-menu" id="close-menu">
+      <i class="fas fa-times"></i>
+    </button>
+    
+    <nav class="mobile-nav">
+       <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="https://mulapal.com/register.php?ref=EIzado" class="nav-link">Create Account</a></li>
+        <li><a href="index.html#faqs" class="nav-link">FAQs</a></li>
+        <li><a href="legitimacy.html" class="nav-link">Legitimacy</a></li>
+        <li><a href="All-summaries.html" class="nav-link">How It Works</a></li>
+        <li><a href="register.html">How To Register</a></li>
+      </ul>
+      <!-- Theme Switch in Mobile Menu -->
+      <div class="theme-switch-container">
+        <span>Dark Mode</span>
+        <label class="theme-switch">
+          <input type="checkbox" id="mobile-theme-toggle">
+          <div class="slider round"></div>
+        </label>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Page Content -->
+  <main>
+    <section class="legitimacy-hero">
+      <div>
+        <h1>Mulapal Agencies is 100% Legitimate</h1>
+        <p>We understand your concerns about online earning platforms. Here's all the proof you need to trust Mulapal Agencies as your reliable income source.</p>
+      </div>
+    </section>
+    
+    <!-- Company Verification Section -->
+    <section class="proof-section">
+      <h2>Our Company Credentials</h2>
+      <p>Mulapal Agencies is a fully registered and compliant business entity. We operate with complete transparency and adhere to all relevant regulations in the countries we serve.</p>
+      
+      <div class="proof-grid">
+        <div class="proof-card">
+          <h3><i class="fas fa-building"></i> Business Registration</h3>
+          <p>Registered as Mulapal Agencies LLC under company number MLP12345678, 
+            with our headquarters in Nairobi, Kenya. Our registration documents are 
+            publicly verifiable. See our registration certificate below.</p>
+        </div>
+        
+        <div class="proof-card">
+          <h3><i class="fas fa-shield-alt"></i> Data Protection</h3>
+          <p>We comply with GDPR and other international data protection regulations. Your personal information is always secure with our encrypted systems.</p>
+        </div>
+        
+        <div class="proof-card">
+          <h3><i class="fas fa-lock"></i> Secure Payments</h3>
+          <p>All financial transactions are processed through PCI-DSS compliant payment gateways. We never store your full payment details on our servers.</p>
+        </div>
+      </div>
+      
+      <div class="badges">
+        <img src="" alt="GDPR Compliant" class="badge">
+        <img src="" alt="PCI DSS Compliant" class="badge">
+        <img src="" alt="SSL Secure" class="badge">
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="proof-section testimonials">
+      <h2>What Our Members Say</h2>
+      <p>Thousands of satisfied members worldwide trust Mulapal Agencies for their 
+        online earnings. Here are some of their experiences:</p>
+      
+      <div class="testimonial-grid">
+        <div class="testimonial">
+          <div class="testimonial-content">
+            "I was skeptical at first, but after receiving my first payment of 
+            KES 11,200 within a week, I became a believer. Mulapal has changed my 
+            financial situation completely."
+          </div>
+          <div class="testimonial-author">Sarah K.</div>
+          <div class="testimonial-location">Mombasa, Kenya</div>
+        </div>
+        
+        <div class="testimonial">
+          <div class="testimonial-content">
+            "As a student, Mulapal Agencies gives me the flexibility to earn money 
+            between classes. I make about KES 1,500 daily which covers all my
+             expenses without having to depend on my parents for upkeep."
+          </div>
+          <div class="testimonial-author">James M.</div>
+          <div class="testimonial-location">Nairobi, Kenya</div>
+        </div>
+        
+        <div class="testimonial">
+          <div class="testimonial-content">
+            "I've tried many online earning platforms, but Mulapal stands out for
+             its timely payments and genuine tasks. Highly recommended for anyone 
+             looking for legitimate online hustle."
+          </div>
+          <div class="testimonial-author">Juma S.</div>
+          <div class="testimonial-location">Nairobi, Kenya</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Payment Proof Section -->
+    <section class="proof-section payment-proof">
+      <h2>Real Payment Proof</h2>
+      <p>See actual payment receipts from our members. We process all payments weekly with no hidden fees or delays.</p>
+      
+      <div class="payment-images">
+        <img src="" alt="Payment Proof 1">
+        <img src="" alt="Payment Proof 2">
+        <img src="" alt="Payment Proof 3">
+      </div>
+      
+      <p style="margin-top: 1.5rem;">Want to see more payment proofs? <a href="#">Visit our payment proof gallery</a> with hundreds of verified transactions.</p>
+    </section>
+
+    <!-- Media Recognition Section -->
+    <section class="proof-section">
+      <h2>Media Recognition</h2>
+      <p>Mulapal Agencies has been featured in reputable business and technology publications:</p>
+      
+      <div class="proof-grid">
+        <div class="proof-card">
+          <h3><i class="fas fa-newspaper"></i> Forbes</h3>
+          <p>"Mulapal Agencies is revolutionizing the micro-task industry with its transparent payment system and global reach."</p>
+          <p><small>June 2025</small></p>
+        </div>
+        
+        <div class="proof-card">
+          <h3><i class="fas fa-tv"></i> TechCrunch</h3>
+          <p>"A standout platform in the crowded online earning space, Mulapal delivers real value to both businesses and workers."</p>
+          <p><small>May 2025</small></p>
+        </div>
+        
+        <div class="proof-card">
+          <h3><i class="fas fa-globe"></i> KBC</h3>
+          <p>"How Mulapal Agencies is empowering the youth through digital work."</p>
+          <p><small>May 2025</small></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="proof-section faq-section">
+      <h2>Common Legitimacy Questions</h2>
+      
+      <div class="faq-item">
+        <div class="faq-question">Is Mulapal Agencies a scam?</div>
+        <div class="faq-answer">
+          <p>Absolutely not. Mulapal Agencies is a fully legitimate business with thousands of satisfied members worldwide. Our business registration, payment proofs, and media recognition all confirm our legitimacy.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">How can I be sure I'll get paid?</div>
+        <div class="faq-answer">
+          <p>We have a perfect track record of payments since our launch. 
+            All payments are processed automatically anytime a client wants to cash out.
+              You can also check our payment proof gallery with hundreds of verified transactions.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">Why do some people say it's not legit?</div>
+        <div class="faq-answer">
+          <p>Some people confuse Mulapal Agencies with other less reputable platforms. Others might not have followed our task guidelines properly and didn't qualify for payment. We encourage you to check our verified reviews and speak with actual members before judging.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">Is my personal information safe?</div>
+        <div class="faq-answer">
+          <p>Yes, we use bank-level encryption for all data and comply with international data protection regulations. We only collect necessary information for payment processing and task assignment.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="proof-section" style="text-align: center;">
+      <h2>Ready to Start Earning?</h2>
+      <p>Join thousands of satisfied members who are already earning with Mulapal Agencies. Registration takes less than 2 minutes and is completely free.</p>
+      <a href="https://mulapal.com/register.php?ref=EIzado" class="btn" style="display: inline-block; margin-top: 1.5rem;">Create Your Account Now</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section about">
+        <div class="logo">Mulapal Agencies</div>
+        <p>Your trusted platform for earning money online by completing simple tasks from anywhere in the world.</p>
+      </div>
+      
+      <div class="footer-section links">
+        <h3>Quick Links</h3>
+         <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="https://mulapal.com/register.php?ref=EIzado">Create Account</a></li>
+          <li><a href="#faqs">FAQs</a></li>
+          <li><a href="legitimacy.html">Legitimacy</a></li>
+          <li><a href="All-summaries.html">How It Works</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section contact">
+        <h3>Contact Us</h3>
+        <p><i class="fas fa-envelope"></i> support@mulapal.com</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Mulapal Agencies. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <div class="floating-buttons">
+    <a href="https://wa.me/254742381320?text=Hi.%20I%20have%20questions%20about%20Mulapal%20Agencies%20legitimacy." class="whatsapp-btn">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <script>
+    // Mobile Menu Toggle - Updated Version
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const closeMenuBtn = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav .nav-link');
+
+    // Toggle mobile menu with better event handling
+    function toggleMobileMenu() {
+      mobileMenu.classList.toggle('active');
+      document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    }
+
+    // Event listeners
+    mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+    closeMenuBtn.addEventListener('click', toggleMobileMenu);
+
+    // Close when clicking a link
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', toggleMobileMenu);
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!mobileMenu.contains(e.target) && 
+          e.target !== mobileMenuToggle && 
+          !mobileMenuToggle.contains(e.target)) {
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Theme Switch Functionality
+    const desktopThemeToggle = document.getElementById('desktop-theme-toggle');
+    const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+    const currentTheme = localStorage.getItem('theme');
+
+    function setTheme(isDark) {
+      if (isDark) {
+        document.documentElement.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.documentElement.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    // Initialize theme
+    if (currentTheme === 'dark') {
+      document.documentElement.classList.add('dark-mode');
+      desktopThemeToggle.checked = true;
+      mobileThemeToggle.checked = true;
+    }
+
+    // Desktop theme toggle
+    desktopThemeToggle.addEventListener('change', (e) => {
+      setTheme(e.target.checked);
+      mobileThemeToggle.checked = e.target.checked;
+    });
+
+    // Mobile theme toggle
+    mobileThemeToggle.addEventListener('change', (e) => {
+      setTheme(e.target.checked);
+      desktopThemeToggle.checked = e.target.checked;
+    });
+
+    // FAQ Accordion
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+      question.addEventListener('click', () => {
+        question.classList.toggle('active');
+        const answer = question.nextElementSibling;
+        answer.classList.toggle('show');
+      });
+    });
+  </script>
+</body>
+</html>
